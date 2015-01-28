@@ -1,3 +1,5 @@
+/* global Phoenix */
+
 import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
@@ -10,6 +12,8 @@ var App = Ember.Application.extend({
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver
 });
+
+App.PhoenixSocket = new Phoenix.Socket(config.websocketEndpoint);
 
 loadInitializers(App, config.modulePrefix);
 

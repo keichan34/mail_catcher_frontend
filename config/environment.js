@@ -31,6 +31,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
+    ENV["simple-auth"].crossOriginWhitelist = [
+      "http://localhost:4000"
+    ];
+
     ENV["simple-auth-oauth2"] = {
       serverTokenEndpoint: "http://localhost:4000/token"
     };

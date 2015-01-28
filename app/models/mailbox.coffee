@@ -7,6 +7,8 @@ Mailbox = DS.Model.extend {
   user_id: DS.attr 'number'
   inserted_at: DS.attr 'date'
   updated_at: DS.attr 'date'
+
+  mails: DS.hasMany 'mail', async: true
 }
 
 `export default Mailbox`

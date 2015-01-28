@@ -11,5 +11,6 @@ Router.map ->
   @resource "mailboxes", ->
     @route "show", path: ":mailbox_id"
 
+  @route 'mailboxes/show'
 
 `export default Router`

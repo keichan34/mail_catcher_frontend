@@ -1,0 +1,7 @@
+<p>Mailboxes#index</p>
+
+<ul>
+  {{#each mailbox in model}}
+    <li>{{#link-to "mailbox.show" mailbox}}{{mailbox.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>

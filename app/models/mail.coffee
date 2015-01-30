@@ -3,8 +3,8 @@
 Mail = DS.Model.extend {
   updated_at: DS.attr 'date'
   inserted_at: DS.attr 'date'
-  mail_data: DS.attr 'string'
 
+  mail_data: DS.belongsTo 'mail-datum'
   mailbox: DS.belongsTo 'mailbox'
 }
 

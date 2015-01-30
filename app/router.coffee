@@ -8,9 +8,8 @@ Router = Ember.Router.extend({
 Router.map ->
   @route "login", path: "/login"
 
-  @resource "mailboxes", ->
-    @route "show", path: ":mailbox_id"
-
-  @route 'mailboxes/show'
+  @resource "mailbox", path: "/mailbox", ->
+    @route "show", path: ":mailbox_id", ->
+      @resource "mailbox.show.mail", path: "/mail/:mail_id"
 
 `export default Router`

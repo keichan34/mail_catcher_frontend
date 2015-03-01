@@ -1,0 +1,36 @@
+{
+  "name": "mail_catcher_frontend",
+  "version": "0.0.1",
+  "description": "The web interface to Mailbagger",
+  "main": "index.js",
+  "scripts": {
+    "watch:js": "watchify assets/scripts/main.js -t babelify -o dist/main.js",
+    "build:js": "browserify assets/scripts/main.js -t babelify -o dist/main.js",
+    "build": "npm run build:js",
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/keichan34/mail_catcher_frontend.git"
+  },
+  "author": "",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/keichan34/mail_catcher_frontend/issues"
+  },
+  "homepage": "https://github.com/keichan34/mail_catcher_frontend",
+  "dependencies": {
+    "babel": "^4.6.3",
+    "node-static": "^0.7.6"
+  },
+  "devDependencies": {
+    "react": "~> 0.13.0",
+    "browserify": "~> 9.0.3",
+    "babelify": "~> 5.0.3",
+    "watchify": "~> 2.4.0",
+    "react-router": "~> 0.13.0",
+    "react-bootstrap": ">= 0.15",
+    "react-router-bootstrap": ">= 0.0.0",
+    "classnames": ">= 1.2.0"
+  }
+}
